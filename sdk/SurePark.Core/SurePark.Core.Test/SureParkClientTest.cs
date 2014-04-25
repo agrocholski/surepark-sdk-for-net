@@ -17,19 +17,19 @@ namespace SurePark.Core.Test
         }
 
         [TestMethod]
-        public void GetAirportParkingInfoTest()
+        public void GetAirportParkingInfoAsyncTest()
         {
-            var parkingInfo = _client.GetAirportParkingInfo().Result;
+            var parkingInfo = _client.GetAirportParkingInfoAsync().Result;
             
             Assert.IsNotNull(parkingInfo);
         }
 
         [TestMethod]
-        public void GetTerminalParkingInfoTest()
+        public void GetTerminalParkingInfoAsyncTest()
         {
             string terminalName = "Terminal 1";
 
-            var parkingInfo = _client.GetTerminalParkingInfo(terminalName).Result;
+            var parkingInfo = _client.GetTerminalParkingInfoAsync(terminalName).Result;
 
             int expected = 2;
             int actual = parkingInfo.Count;
@@ -38,12 +38,12 @@ namespace SurePark.Core.Test
         }
 
         [TestMethod]
-        public void GetTerminalLotParkingInfoTest()
+        public void GetTerminalLotParkingInfoAsyncTest()
         {;
             string terminalName = "Terminal 1";
             string lotName = "Total General (T1)";
 
-            var parkingInfo = _client.GetTerminalLotParkingInfo(terminalName, lotName).Result;
+            var parkingInfo = _client.GetTerminalLotParkingInfoAsync(terminalName, lotName).Result;
 
             int expected = 1;
             int actual = parkingInfo.Count;

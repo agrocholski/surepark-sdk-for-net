@@ -20,7 +20,7 @@ namespace SurePark.Core
             _parkingAvailabilityUrl = parkingAvailabilityUrl;
         }
 
-        public async Task<List<ParkingInfoItem>> GetAirportParkingInfo()
+        public async Task<List<ParkingInfoItem>> GetAirportParkingInfoAsync()
         {
             var httpClient = new HttpClient();
 
@@ -39,9 +39,9 @@ namespace SurePark.Core
             return parkingInfo.Items.ToList();
         }
 
-        public async Task<List<ParkingInfoItem>> GetTerminalParkingInfo(string terminalName)
+        public async Task<List<ParkingInfoItem>> GetTerminalParkingInfoAsync(string terminalName)
         {
-            var parkingInfo = await GetAirportParkingInfo();
+            var parkingInfo = await GetAirportParkingInfoAsync();
 
             var query = (from item in parkingInfo
                          where item.TerminalName == terminalName
@@ -50,9 +50,9 @@ namespace SurePark.Core
             return query;
         }
 
-        public async Task<List<ParkingInfoItem>>GetTerminalLotParkingInfo(string terminalName, string lotName)
+        public async Task<List<ParkingInfoItem>>GetTerminalLotParkingInfoAsync(string terminalName, string lotName)
         {
-            var parkingInfo = await GetTerminalParkingInfo(terminalName);
+            var parkingInfo = await GetTerminalParkingInfoAsync(terminalName);
 
             var query = (from item in parkingInfo
                          where item.LotName == lotName

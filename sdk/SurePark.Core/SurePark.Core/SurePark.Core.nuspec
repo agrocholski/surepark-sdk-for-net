@@ -9,7 +9,7 @@
     <projectUrl>https://github.com/agrocholski/surepark-sdk-for-net</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
-    <releaseNotes>Initial release.</releaseNotes>
+    <releaseNotes>Changed methods to follow Async naming convention.</releaseNotes>
     <copyright>Copyright 2014</copyright>
     <tags>surepark windows windows-phone pcl parking airport msp</tags>
   </metadata>
