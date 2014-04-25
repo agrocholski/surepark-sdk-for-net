@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<app>
+	<parkingRates>
+		<Lindbergh>
+			<longTerm>
+				<discount>
+					<firstHour>6</firstHour>
+					<additionalHour>2</additionalHour>
+					<dailyMax>18</dailyMax>
+				</discount>
+				<regular>
+					<firstHour>8</firstHour>
+					<additionalHour>2</additionalHour>
+					<dailyMax>20</dailyMax>
+				</regular>
+			</longTerm>
+			
+			<shortTerm>
+				<discount>
+					<firstHour>3</firstHour>
+					<oneTwo>6</oneTwo>
+					<upToEight>1</upToEight>
+					<beyondEight>2</beyondEight>
+					<dailyMax>34</dailyMax>
+				</discount>
+				<regular>
+					<firstHour>5</firstHour>
+					<oneTwo>8</oneTwo>
+					<upToEight>1</upToEight>
+					<beyondEight>2</beyondEight>
+					<dailyMax>36</dailyMax>
+				</regular>
+			</shortTerm>
+		</Lindbergh>
+		
+		<Humphrey>
+			<longTerm>
+				<discount>
+					<firstHour>6</firstHour>
+					<additionalHour>2</additionalHour>
+					<dailyMax>14</dailyMax>
+				</discount>
+				<regular>
+					<firstHour>8</firstHour>
+					<additionalHour>2</additionalHour>
+					<dailyMax>16</dailyMax>
+				</regular>
+			</longTerm>
+			
+			<shortTerm>
+				<discount>
+					<firstHour>3</firstHour>
+					<oneTwo>6</oneTwo>
+					<upToEight>1</upToEight>
+					<beyondEight>2</beyondEight>
+					<dailyMax>34</dailyMax>
+				</discount>
+				<regular>
+					<firstHour>5</firstHour>
+					<oneTwo>8</oneTwo>
+					<upToEight>1</upToEight>
+					<beyondEight>2</beyondEight>
+					<dailyMax>36</dailyMax>
+				</regular>
+			</shortTerm>
+		</Humphrey>
+		
+	</parkingRates>
+	
+	
+	<directions>
+		<general><b>Minneapolis-St. Paul International Airport</b> (MSP) is conveniently located within 30 minutes of both downtown Minneapolis and downtown St. Paul. The nation's largest shopping center, Mall of America, is just minutes away.<br /><br />MSP has <b>two full-service terminals</b> that are connected via light rail or highway. <b>There is no direct pedestrian access from either building to the other.</b> It is important that you know <b>which terminal</b> your airline uses.<br /><br />The <b>Lindbergh Terminal</b> is located just off Highway 5 in St. Paul. Highway 5 connects to Interstate 494 and Highway 55.<br /><br />The <b>Humphrey Terminal</b> is just north of Interstate 494 off 34th Avenue.</general>
+		
+		<Hump-fromMpls>Take I-35W south to I-494 east. Take I-494 east to the 34th Avenue exit. Exit 34th Avenue and turn left (north) at the traffic light. Follow the signs to Humphrey Terminal.</Hump-fromMpls>
+		
+		<Hump-fromStPaul>Take I-35E south to the W. 7th Street/MN-5 exit. Turn right onto W. 7th Street/MN-5.  Travel west on MN-5 past the Lindbergh Terminal exit until you reach the 34th Avenue exit. Follow the signs to 34th Ave/Humphrey Terminal. Turn right (north) onto 34th Avenue and follow the signs to Humphrey Terminal.</Hump-fromStPaul>
+		
+		<Hump-fromSouthEast>From I-35E, travel north to I-494 west. Exit onto I-494 and travel west to the 34th Avenue/Humphrey Terminal exit. At the traffic light, turn right (north) onto 34th Avenue and follow the signs to Humphrey Terminal.</Hump-fromSouthEast>
+		
+		<Hump-fromSouthWest>Take I-494 east to the 34th Avenue exit. At the traffic light, turn left (north) onto 34th Avenue and follow the signs to Humphrey Terminal.</Hump-fromSouthWest>
+		
+		
+		<Lind-fromMpls>Take I-35W south to I-494 east. Travel east on I-494 to the Highway 5 exit. The Lindbergh Terminal is located directly off Highway 5. Follow the highway signs to the Lindbergh Terminal. The terminal exit will be on the left beyond the Post Road exit.</Lind-fromMpls>
+		
+		<Lind-fromStPaul>Take I-35E south to the W. 7th Street/MN-5 exit. Turn right onto W. 7th Street/MN-5.  Continue traveling west on MN-5.  The Lindbergh Terminal is located directly off MN-5.  Follow highway signs to the Lindbergh Terminal exit.</Lind-fromStPaul>
+		
+		<Lind-fromSouthEast>From I-35E, travel north to I-494 west. Exit onto I-494 and travel west to the Highway 5/Lindbergh Terminal exit. Follow the highway signs to the Lindbergh Terminal. The terminal exit will be on the left beyond the Post Road exit.</Lind-fromSouthEast>
+		
+		<Lind-fromSouthWest>Take I-494 east to the Highway 5 exit. Exit onto Highway 5 and follow the signs to Lindbergh Terminal. The terminal exit will be on the left beyond the Post Road exit.</Lind-fromSouthWest>
+		
+	</directions>
+</app>

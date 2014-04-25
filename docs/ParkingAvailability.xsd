@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="parkinginfo" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="parkinginfo" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="item">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="LOT" type="xs:string" minOccurs="0" />
+              <xs:element name="COUNT_AREA_ID" type="xs:string" minOccurs="0" />
+              <xs:element name="COUNT_AREA_DATE" type="xs:string" minOccurs="0" />
+              <xs:element name="COUNT_AREA_NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="SPACES" type="xs:string" minOccurs="0" />
+              <xs:element name="VEHICLES" type="xs:string" minOccurs="0" />
+              <xs:element name="CAPACITY" type="xs:string" minOccurs="0" />
+              <xs:element name="PERCENT_FULL" type="xs:string" minOccurs="0" />
+              <xs:element name="TIME_TO_FULL" type="xs:string" minOccurs="0" />
+              <xs:element name="Percent_Ramp" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

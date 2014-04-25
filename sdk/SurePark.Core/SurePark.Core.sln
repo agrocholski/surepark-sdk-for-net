@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.30324.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SurePark.Core", "SurePark.Core\SurePark.Core.csproj", "{41633B5F-68C5-4B3D-B5B7-E4D69FAF7FC0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SurePark.Core.Test", "SurePark.Core.Test\SurePark.Core.Test.csproj", "{23F76011-E20E-41B9-9ECB-9726F0CF5313}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{41633B5F-68C5-4B3D-B5B7-E4D69FAF7FC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{41633B5F-68C5-4B3D-B5B7-E4D69FAF7FC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{41633B5F-68C5-4B3D-B5B7-E4D69FAF7FC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23F76011-E20E-41B9-9ECB-9726F0CF5313}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23F76011-E20E-41B9-9ECB-9726F0CF5313}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23F76011-E20E-41B9-9ECB-9726F0CF5313}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23F76011-E20E-41B9-9ECB-9726F0CF5313}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

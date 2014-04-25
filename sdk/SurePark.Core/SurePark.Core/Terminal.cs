@@ -14,8 +14,19 @@ namespace SurePark.Core
         }
 
         public string Name { get; set; }
+        
         public string ParkingAvailability { get; set; }
+        
         public List<ParkingRate> ParkingRates { get; set; }
+        
         public DateTime LastUpdated { get; set; }
+
+        public string AvailabilityId { get; set; }
+
+        public string AvailabilityUrl { get; set; }
+
+        public string ParkingRateId { get; set; }
+
+        public string ParkingRateUrl { get; set; }
     }
 }
