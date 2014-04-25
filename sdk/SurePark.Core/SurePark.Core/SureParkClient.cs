@@ -13,11 +13,18 @@ namespace SurePark.Core
 {
     public class SureParkClient
     {
-        public async Task<List<ParkingInfoItem>> GetAirportParkingInfo(string parkingInfoUrl)
+        private string _parkingAvailabilityUrl = "";
+
+        public SureParkClient(string parkingAvailabilityUrl)
+        {
+            _parkingAvailabilityUrl = parkingAvailabilityUrl;
+        }
+
+        public async Task<List<ParkingInfoItem>> GetAirportParkingInfo()
         {
             var httpClient = new HttpClient();
 
-            var responseXml = await httpClient.GetStringAsync(parkingInfoUrl);
+            var responseXml = await httpClient.GetStringAsync(_parkingAvailabilityUrl);
 
             var validXml = CleanupAvailabilityXml(responseXml);
 
@@ -32,9 +39,9 @@ namespace SurePark.Core
             return parkingInfo.Items.ToList();
         }
 
-        public async Task<List<ParkingInfoItem>> GetTerminalParkingInfo(string parkingInfoUrl, string terminalId)
+        public async Task<List<ParkingInfoItem>> GetTerminalParkingInfo(string terminalId)
         {
-            var parkingInfo = await GetAirportParkingInfo(parkingInfoUrl);
+            var parkingInfo = await GetAirportParkingInfo();
 
             var query = (from item in parkingInfo
                          where item.Lot == terminalId
@@ -43,20 +50,15 @@ namespace SurePark.Core
             return query;
         }
 
-        public async Task<List<ParkingInfoItem>>GetTerminalLotParkingInfo(string parkingInfoUrl, string terminalId, string lotId)
+        public async Task<List<ParkingInfoItem>>GetTerminalLotParkingInfo(string terminalId, string lotId)
         {
-            var parkingInfo = await GetTerminalParkingInfo(parkingInfoUrl, terminalId);
+            var parkingInfo = await GetTerminalParkingInfo(terminalId);
 
             var query = (from item in parkingInfo
                          where item.CountAreaName == lotId
                          select item).ToList();
 
             return query;
-        }
-
-        public async Task<List<ParkingRate>> GetTerminalParkingRates(string parkingRateId, string parkingRateUrl)
-        {
-            throw new NotImplementedException();
         }
 
         private string CleanupAvailabilityXml(string sourceXml)

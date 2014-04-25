@@ -7,13 +7,19 @@ namespace SurePark.Core.Test
     [TestClass]
     public class SureParkClientTest
     {
+        private string _parkingInfoUrl = "http://www.mspairport.com/data/sureparknow/surepark.aspx";
+        private SureParkClient _client = null;
+
+        [TestInitialize()]
+        public void Initialize()
+        {
+            _client = new SureParkClient(_parkingInfoUrl);
+        }
+
         [TestMethod]
         public void GetAirportParkingInfoTest()
         {
-            string parkingInfoUrl = "http://www.mspairport.com/data/sureparknow/surepark.aspx";
-
-            var client = new SureParkClient();
-            var parkingInfo = client.GetAirportParkingInfo(parkingInfoUrl).Result;
+            var parkingInfo = _client.GetAirportParkingInfo().Result;
             
             Assert.IsNotNull(parkingInfo);
         }
@@ -21,11 +27,9 @@ namespace SurePark.Core.Test
         [TestMethod]
         public void GetTerminalParkingInfoTest()
         {
-            string parkingInfoUrl = "http://www.mspairport.com/data/sureparknow/surepark.aspx";
             string terminalId = "Terminal 1";
 
-            var client = new SureParkClient();
-            var parkingInfo = client.GetTerminalParkingInfo(parkingInfoUrl, terminalId).Result;
+            var parkingInfo = _client.GetTerminalParkingInfo(terminalId).Result;
 
             int expected = 2;
             int actual = parkingInfo.Count;
@@ -35,13 +39,11 @@ namespace SurePark.Core.Test
 
         [TestMethod]
         public void GetTerminalLotParkingInfoTest()
-        {
-            string parkingInfoUrl = "http://www.mspairport.com/data/sureparknow/surepark.aspx";
+        {;
             string terminalId = "Terminal 1";
             string lotId = "Total General (T1)";
 
-            var client = new SureParkClient();
-            var parkingInfo = client.GetTerminalLotParkingInfo(parkingInfoUrl, terminalId, lotId).Result;
+            var parkingInfo = _client.GetTerminalLotParkingInfo(terminalId, lotId).Result;
 
             int expected = 1;
             int actual = parkingInfo.Count;

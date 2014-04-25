@@ -40,10 +40,8 @@
   <ItemGroup>
     <Compile Include="ParkingInfo.cs" />
     <Compile Include="ParkingInfoItem.cs" />
-    <Compile Include="ParkingRate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SureParkClient.cs" />
-    <Compile Include="Terminal.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Net.Http">
