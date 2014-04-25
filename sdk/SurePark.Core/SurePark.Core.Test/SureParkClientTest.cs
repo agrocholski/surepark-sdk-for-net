@@ -27,9 +27,9 @@ namespace SurePark.Core.Test
         [TestMethod]
         public void GetTerminalParkingInfoTest()
         {
-            string terminalId = "Terminal 1";
+            string terminalName = "Terminal 1";
 
-            var parkingInfo = _client.GetTerminalParkingInfo(terminalId).Result;
+            var parkingInfo = _client.GetTerminalParkingInfo(terminalName).Result;
 
             int expected = 2;
             int actual = parkingInfo.Count;
@@ -40,10 +40,10 @@ namespace SurePark.Core.Test
         [TestMethod]
         public void GetTerminalLotParkingInfoTest()
         {;
-            string terminalId = "Terminal 1";
-            string lotId = "Total General (T1)";
+            string terminalName = "Terminal 1";
+            string lotName = "Total General (T1)";
 
-            var parkingInfo = _client.GetTerminalLotParkingInfo(terminalId, lotId).Result;
+            var parkingInfo = _client.GetTerminalLotParkingInfo(terminalName, lotName).Result;
 
             int expected = 1;
             int actual = parkingInfo.Count;

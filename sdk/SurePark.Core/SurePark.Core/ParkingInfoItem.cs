@@ -10,25 +10,25 @@ namespace SurePark.Core
     public class ParkingInfoItem
     {
         [XmlElementAttribute("LOT")]
-        public string Lot { get; set; }
+        public string TerminalName { get; set; }
 
         [XmlElementAttribute("COUNT_AREA_ID")]
-        public int CountAreaId { get; set; }
+        internal int CountAreaId { get; set; }
 
         [XmlElementAttribute("COUNT_AREA_DATE")]
-        public string CountAreaDate { get; set; }
+        internal string CountAreaDate { get; set; }
 
         [XmlElementAttribute("COUNT_AREA_NAME")]
-        public string CountAreaName { get; set; }
+        public string LotName { get; set; }
 
         [XmlElementAttribute("SPACES")]
-        public int Spaces { get; set; }
+        public int AvailabileParkingStalls { get; set; }
 
         [XmlElementAttribute("VEHICLES")]
-        public int Vehicles { get; set; }
+        public int UsedParkingStalls { get; set; }
 
         [XmlElementAttribute("CAPACITY")]
-        public int Capacity { get; set; }
+        public int TotalParkingStalls { get; set; }
 
         [XmlElementAttribute("PERCENT_FULL")]
         public int PercentFull { get; set; }

@@ -39,23 +39,23 @@ namespace SurePark.Core
             return parkingInfo.Items.ToList();
         }
 
-        public async Task<List<ParkingInfoItem>> GetTerminalParkingInfo(string terminalId)
+        public async Task<List<ParkingInfoItem>> GetTerminalParkingInfo(string terminalName)
         {
             var parkingInfo = await GetAirportParkingInfo();
 
             var query = (from item in parkingInfo
-                         where item.Lot == terminalId
+                         where item.TerminalName == terminalName
                          select item).ToList();
 
             return query;
         }
 
-        public async Task<List<ParkingInfoItem>>GetTerminalLotParkingInfo(string terminalId, string lotId)
+        public async Task<List<ParkingInfoItem>>GetTerminalLotParkingInfo(string terminalName, string lotName)
         {
-            var parkingInfo = await GetTerminalParkingInfo(terminalId);
+            var parkingInfo = await GetTerminalParkingInfo(terminalName);
 
             var query = (from item in parkingInfo
-                         where item.CountAreaName == lotId
+                         where item.LotName == lotName
                          select item).ToList();
 
             return query;
